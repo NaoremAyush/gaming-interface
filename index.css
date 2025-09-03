@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
-    scroll-behavior: smooth;
+
 }
 .container {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -23,7 +23,7 @@ header {
     padding: 10px 40px;
     z-index: 10;
     background-color: #3841255b;
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
 }
 .head-left {
     display: flex;
@@ -54,7 +54,7 @@ header {
     text-decoration: none;
     color: white;
     padding-left: 25px;
-    font-size: 15px;
+    font-size: 20px;
 }
 .hero-section {
     position: relative;
@@ -182,7 +182,7 @@ header {
     text-align: center;
     margin: 25px 0;
     color: rgb(247, 243, 243);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     background: linear-gradient(to right, #4acfee, #53f8c9,
     #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
     background-size: 200%;
@@ -309,4 +309,212 @@ header {
 .card:nth-child(6) {
     height: 60vh;
 } 
+ /* @media screen and (max-width:650px){
+    header {
+        padding : 0 10px;
+    }
+ 
+    .head-left button {
+    display: none;
+    }
+.head-right a {
+    font-size: 12px;
+    padding: 0 5px;
+}
+.hero-info {
+    left: 5%;
+}
+.hero-section h1 {
+    font-size: 90px;
+ 
+ }
 
+
+.next-btn {
+ 
+    left: 25%;
+    top: 40%;
+}
+.about-section {
+    margin: 0;
+}
+.about-section p {
+    font-size: 40px;
+}
+.about-section h1 {
+    font-size: 50px;
+}
+.image-box {
+    width: 300px;
+    height: 500px;
+}
+.about-section h5 {
+    max-width: 300px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.about-section h4, .about-section h5 {
+    max-width: 350px;
+    text-align: center;
+}
+ }
+/* .info-section {
+    width: 90%;
+    margin-top: 50px;
+}
+.info-section h3 {
+    font-size: 20px;
+}
+.info-section p {
+    font-size: 12px;
+    max-width: 300px;
+    line-height: 18px;
+}
+.info-cards {
+    grid-template-columns: auto;
+    gap: 10px;
+}
+.card {
+    height: 30vh;
+}
+.card h1 {
+    font-size: 30px;
+    top: 5px;
+}
+.card p {
+    top: 50px;
+    max-width: 200px;
+    font-size: 12px;
+}
+.card button {
+    font-size: 12px;
+    padding: 5px 15px;
+    bottom: 10px;
+}
+.card:nth-child(1){
+    height: 40vh;
+
+}
+.card:nth-child(2){
+    height: 50vh;
+}
+.card:nth-child(5),
+.card:nth-child(6) {
+    height: 40vh;
+} 
+ } */ 
+@media screen and (max-width: 650px) {
+    header {
+        padding: 0 5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .head-left img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+    .head-left button {
+        display: none;
+    }
+    .head-right {
+        margin-top: 10px;
+    }
+    .head-right a {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .hero-info {
+        left: 5%;
+        top: 60px;
+    }
+    .hero-info h1 {
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .hero-info p {
+        font-size: 14px;
+    }
+    .hero-info button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .gaming-text {
+        font-size: 40px;
+        right: 10px;
+        bottom: 10px;
+    }
+    .next-btn {
+        width: 50px;
+        height: 50px;
+        left: 40%;
+        top: 45%;
+        font-size: 18px;
+    }
+    .about-section {
+        margin-top: 80px;
+        padding: 0 5px;
+    }
+    .image-box {
+        width: 180px;
+        height: 250px;
+        border-radius: 20px;
+    }
+    .about-section p {
+        font-size: 20px;
+    }
+    .about-section h1 {
+        font-size: 28px;
+        max-width: 95vw;
+    }
+    .about-section h4, .about-section h5 {
+        max-width: 95vw;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+        line-height: 16px;
+    }
+    .info-section {
+        width: 98vw;
+        margin-top: 40px;
+    }
+    .info-section h3 {
+        font-size: 16px;
+    }
+    .info-section p {
+        font-size: 11px;
+        max-width: 95vw;
+        line-height: 16px;
+    }
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .card {
+        height: 25vh;
+        border-radius: 10px;
+    }
+    .card h1 {
+        font-size: 18px;
+        top: 5px;
+    }
+    .card p {
+        top: 30px;
+        max-width: 90vw;
+        font-size: 10px;
+    }
+    .card button {
+        font-size: 10px;
+        padding: 5px 10px;
+        bottom: 5px;
+        left: 5px;
+    }
+    .card:nth-child(1),
+    .card:nth-child(2),
+    .card:nth-child(5),
+    .card:nth-child(6) {
+        height: 25vh;
+    }
+}
