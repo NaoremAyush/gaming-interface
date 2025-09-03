@@ -309,121 +309,42 @@ header {
 .card:nth-child(6) {
     height: 60vh;
 } 
- /* @media screen and (max-width:650px){
-    header {
-        padding : 0 10px;
-    }
- 
-    .head-left button {
-    display: none;
-    }
-.head-right a {
-    font-size: 12px;
-    padding: 0 5px;
-}
-.hero-info {
-    left: 5%;
-}
-.hero-section h1 {
-    font-size: 90px;
- 
- }
 
-
-.next-btn {
- 
-    left: 25%;
-    top: 40%;
-}
-.about-section {
-    margin: 0;
-}
-.about-section p {
-    font-size: 40px;
-}
-.about-section h1 {
-    font-size: 50px;
-}
-.image-box {
-    width: 300px;
-    height: 500px;
-}
-.about-section h5 {
-    max-width: 300px;
-    font-size: 12px;
-    line-height: 18px;
-}
-.about-section h4, .about-section h5 {
-    max-width: 350px;
-    text-align: center;
-}
- }
-/* .info-section {
-    width: 90%;
-    margin-top: 50px;
-}
-.info-section h3 {
-    font-size: 20px;
-}
-.info-section p {
-    font-size: 12px;
-    max-width: 300px;
-    line-height: 18px;
-}
-.info-cards {
-    grid-template-columns: auto;
-    gap: 10px;
-}
-.card {
-    height: 30vh;
-}
-.card h1 {
-    font-size: 30px;
-    top: 5px;
-}
-.card p {
-    top: 50px;
-    max-width: 200px;
-    font-size: 12px;
-}
-.card button {
-    font-size: 12px;
-    padding: 5px 15px;
-    bottom: 10px;
-}
-.card:nth-child(1){
-    height: 40vh;
-
-}
-.card:nth-child(2){
-    height: 50vh;
-}
-.card:nth-child(5),
-.card:nth-child(6) {
-    height: 40vh;
-} 
- } */ 
 @media screen and (max-width: 650px) {
-    header {
-        padding: 0 5px;
-        flex-direction: column;
-        align-items: flex-start;
+       header {
+        padding: 0 10px;
+        flex-direction: row;          /* ✅ keep row instead of column */
+        justify-content: space-between; /* ✅ push left & right apart */
+        align-items: center;          /* ✅ vertically align */
     }
+
+    .head-left {
+        display: flex;
+        align-items: center;
+        flex-direction: row;          /* ✅ logo + button stay in row */
+    }
+
     .head-left img {
-        width: 60px;
-        height: 60px;
-        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        margin-right: 8px;
     }
+
     .head-left button {
-        display: none;
+        display: none; /* keep hidden on small screens */
     }
+
     .head-right {
-        margin-top: 10px;
+        display: flex;
+        flex-direction: row;          /* ✅ links stay in row */
+        margin: 0;
     }
+
     .head-right a {
         font-size: 12px;
-        padding: 0 5px;
+        padding: 0 8px;
     }
+
     .hero-info {
         left: 5%;
         top: 60px;
@@ -450,7 +371,20 @@ header {
         height: 50px;
         left: 40%;
         top: 45%;
+        opacity: 0;
         font-size: 18px;
+        align-items: center;
+        justify-content: center;
+        background-color: #edff66b6;
+        z-index: 100; 
+    }
+    .next-btn:hover {
+        width: 50px;
+        height: 50px;
+        color: white;
+        box-shadow: 0 0 15px #edff66;
+        opacity: 1;
+
     }
     .about-section {
         margin-top: 80px;
@@ -516,5 +450,9 @@ header {
     .card:nth-child(5),
     .card:nth-child(6) {
         height: 25vh;
-    }
+    } 
+    .card:nth-child(2){
+        grid-row: span 2;
+        height: 50vh;   
+}
 }
